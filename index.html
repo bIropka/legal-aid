@@ -589,9 +589,9 @@
 
         <div class="row">
 
-            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 form-ask-question-wrap">
 
-                <form action="#" id="form-ask-question-1" class="ask-question">
+                <form action="#" id="form-ask-question-1" class="form-ask-question">
 
                     <p class="form-title">Остались вопросы?</p>
 
@@ -871,29 +871,37 @@
 
             <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
 
-                <form action="#" id="form-ask-question-2" class="ask-question">
+                <div class="form-ask-question-wrap">
 
-                    <p class="form-title">Остались вопросы?</p>
+                    <form action="#" id="form-ask-question-2" class="form-ask-question">
 
-                    <p class="text">
-                        Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam
-                    </p>
+                        <p class="form-title te">Остались вопросы?</p>
 
-                    <label class="form-field-wrapper">
-                        <input id="question-user-name-2" class="form-field" type="text" placeholder="Ваше имя"/>
-                    </label>
+                        <p class="text">
+                            Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam
+                        </p>
 
-                    <label class="form-field-wrapper">
-                        <input id="question-user-phone-2" class="form-field" type="text" placeholder="Ваш телефон"/>
-                    </label>
+                        <fieldset>
 
-                    <label class="form-field-wrapper">
-                        <textarea id="question-user-question-2" class="form-field" cols="" rows="" placeholder="Ваш вопрос"></textarea>
-                    </label>
+                            <label class="form-field-wrapper pull-left">
+                                <input id="question-user-name-2" class="form-field" type="text" placeholder="Ваше имя"/>
+                            </label>
 
-                    <input class="form-submit" type="submit" value="Задать вопрос"/>
+                            <label class="form-field-wrapper pull-right">
+                                <input id="question-user-phone-2" class="form-field" type="text" placeholder="Ваш телефон"/>
+                            </label>
 
-                </form>
+                            <label class="form-field-wrapper form-textarea-wrap">
+                                <textarea id="question-user-question-2" class="form-field" cols="" rows="" placeholder="Ваш вопрос"></textarea>
+                            </label>
+
+                        </fieldset>
+
+                        <input class="form-submit" type="submit" value="Задать вопрос"/>
+
+                    </form>
+
+                </div>
 
             </div>
 
@@ -906,37 +914,39 @@
 <section class="contacts">
 
     <div class="on-map">
-
-    </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.3576627331163!2d37.59909161209831!3d55.76527975678503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a46db9a9151%3A0xd43f63996b0cadef!2z0KLQstC10YDRgdC60LDRjyDRg9C7LiwgMTQsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjUwMDk!5e0!3m2!1sru!2sua!4v1470049763947" width="100%" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>    </div>
 
     <div class="container">
 
-        <h2>Наши контакты</h2>
+        <div class="contacts-inner-wrap">
 
-        <div class="contacts-inner">
+            <div class="contacts-inner">
 
-            <div class="address">
+                <h2>Наши контакты</h2>
 
-                <p>
-                    176354, г Москва, ул. Тверская, 14
-                </p>
+                <div class="address">
 
-            </div>
+                    <p>
+                        176354, г Москва, ул. Тверская, 14
+                    </p>
 
-            <div class="in-touch">
+                </div>
 
-                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                <div class="in-touch">
 
-                <p>
-                    Пн- Пт 9:00 - 18:00
-                </p>
+                    <p>
+                        <a href="tel:+74951234567">+7 (495) <span>123-45-67</span></a>
+                        Пн- Пт 9:00 - 18:00
+                    </p>
 
-            </div>
+                </div>
 
-            <div class="email">
+                <div class="email">
 
-                <a href="mailto:pavel.rabotaem@gmail.com">pavel.rabotaem@gmail.com</a>
-                
+                    <a href="mailto:pavel.rabotaem@gmail.com">pavel.rabotaem@gmail.com</a>
+
+                </div>
+
             </div>
 
         </div>
@@ -946,7 +956,13 @@
 </section>
 
 <footer>
-    <p>All Right Reserved © 2016 <span>All Right Reserved © 2016 «Company Name»  </span>«Company Name»</p>
+
+    <div class="container">
+
+        <p>All Right Reserved © 2016 <span>«Company Name»</span></p>
+
+    </div>
+
 </footer>
 
 <script src="js/jquery-2.1.4.min.js"></script>
