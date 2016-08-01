@@ -55,6 +55,7 @@
 }
 
 img {
+    display: block;
     width: 100%;
     height: auto;
 }
@@ -89,7 +90,7 @@ ul li {
 }
 
 .container, .container .row div {
-    outline: 1px solid #000000;
+    outline: 1px solid #ff0000;
 }
 
 nav ul {
@@ -99,5 +100,73 @@ nav ul {
 .text-green {color: #5cb85c;}
 .text-white {color: #ffffff;}
 .text-blue {color: #175d7f}
+
+.with-decor {
+    position: relative;
+}
+.with-decor:before {
+    content: '';
+    display: block;
+    width: 111px;
+    height: 40px;
+    background: transparent url('../images/block-decor.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    margin: auto;
+    top: -40px;
+    left: 0;
+    right: 0;
+}
+
+/******************************
+********** header *************
+******************************/
+
+
+/******************************
+********** about-us *************
+******************************/
+#about-us {
+    background: transparent url('../images/background-about-us.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/******************************
+********** ask question *************
+******************************/
+.ask-question-block {
+    background-color: #5cb85c;
+}
+/******************************
+********** BLOCK *************
+******************************/
+
+/******************************
+********** BLOCK *************
+******************************/
+
+/******************************
+********** BLOCK *************
+******************************/
+
+/******************************
+********** BLOCK *************
+******************************/
+
+/******************************
+********** BLOCK *************
+******************************/
+
+/******************************
+********** BLOCK *************
+******************************/
+
+/******************************
+********** BLOCK *************
+******************************/
+
+/******************************
+********** BLOCK *************
+******************************/
 
 
