@@ -6,6 +6,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Open Sans Italic';
+    src: url("../fonts/OpenSans-Italic.eot");
+    src: url("../fonts/OpenSans-Italic.eot") format("embedded-opentype"), url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff"), url("../fonts/OpenSans-Italic.ttf") format("truetype"), url("../fonts/OpenSans-Italic.svg") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Open Sans Semibold';
     src: url("../fonts/OpenSans-Semibold.eot");
     src: url("../fonts/OpenSans-Semibold.eot") format("embedded-opentype"), url("../fonts/OpenSans-Semibold.woff2") format("woff2"), url("../fonts/OpenSans-Semibold.woff") format("woff"), url("../fonts/OpenSans-Semibold.ttf") format("truetype"), url("../fonts/OpenSans-Semibold.svg") format("svg");
@@ -69,11 +76,14 @@ h2 {
     font-size: 36px;
     font-weight: 100;
     text-align: center;
+    margin: 0;
 }
 h3 {
     font-family: 'Open Sans Light Italic', sans-serif;
     font-size: 30px;
     font-weight: 100;
+    text-align: center;
+    margin: 0 0 50px;
 }
 h4 {
     font-weight: 100;
@@ -125,10 +135,23 @@ nav ul {
 .fill-light-blue {
     background-color: #eff4f7;
 }
-
-.form-field {
+.form-field-wrap {
+    display: inline-block;
     width: 320px;
     height: 30px;
+    -moz-text-align-last: left;
+    -ms-text-align-last: left;
+    text-align-last: left;
+    text-align: left;
+}
+.form-field {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d2e0e7;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding-left: 20px;
 }
 
 .form-field::-webkit-input-placeholder {font-size: 14px;color: #666666;opacity: 1;}
@@ -143,7 +166,99 @@ nav ul {
 textarea {
     resize: none;
 }
+button, .form-submit {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 -3px 4px -3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 -3px 4px -3px rgba(0,0,0,0.5);
+    box-shadow: inset 0 -3px 4px -3px rgba(0,0,0,0.5);
+    font-family: 'Open Sans Bold', sans-serif;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    height: 40px;
+    line-height: 35px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.button-green {
+    width: 295px;
+    background-color: #5cb85c;
+}
+.button-green:hover {
+    background-color: #4f9f4f;
+}
 
+.button-blue {
+    width: 220px;
+    background-color: #175d7f;
+}
+.button-blue:hover {
+    background-color: #124f6d;
+}
+
+a:active, a:focus {
+    outline: none;
+}
+
+button, button:hover, button:active {
+    outline: none;
+}
+button::-moz-focus-inner {
+    outline: none;
+}
+input, input:hover, input:active, input:focus {
+    outline: none;
+}
+textarea, textarea:hover, textarea:active, textarea:focus {
+    outline: none;
+}
+
+section {
+    padding: 50px 0 65px;
+}
+
+.certificates .row, .reviews .row, .services .row {
+    position: relative;
+}
+
+.slider {
+    display: block;
+    width: 84%;
+    margin: 0 auto;
+}
+.slider-controls {
+    display: block;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.slider-controls-left {
+    background: transparent url('../images/sprite-slider-controls.png') no-repeat left center;
+    background-size: cover;
+    left: 0;
+}
+.slider-controls-left:hover {
+    background: transparent url('../images/sprite-slider-controls.png') no-repeat 66% center;
+    background-size: cover;
+}
+.slider-controls-right {
+    background: transparent url('../images/sprite-slider-controls.png') no-repeat 33% center;
+    background-size: cover;
+    right: 0;
+}
+.slider-controls-right:hover {
+    background: transparent url('../images/sprite-slider-controls.png') no-repeat 100% center;
+    background-size: cover;
+}
 /******************************
 ********** header *************
 ******************************/
@@ -177,21 +292,169 @@ textarea {
 /******************************
 ********** work scheme *************
 ******************************/
-
+.work-scheme {
+    padding-bottom: 50px;
+}
+.work-step {
+    position: relative;
+    border: 8px solid #d5e1e7;
+}
+.work-step:before {
+    display: block;
+    width: 42px;
+    height: 42px;
+    line-height: 38px;
+    background-color: #d5e1e7;
+    font-family: 'Intro', sans-serif;
+    font-size: 30px;
+    color: #a0b8c4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.step-icon {
+    width: 125px;
+    height: 90px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.work-step:nth-child(1) .step-icon {
+    background: transparent url('../images/sprite-images.png') no-repeat 66.5% center;
+    background-size: cover;
+}
+.work-step:nth-child(1):before {
+    content: '01';
+}
+.work-step:nth-child(2) .step-icon {
+    background: transparent url('../images/sprite-images.png') no-repeat 77.75% center;
+    background-size: cover;
+}
+.work-step:nth-child(2):before {
+    content: '02';
+}
+.work-step:nth-child(3) .step-icon {
+    background: transparent url('../images/sprite-images.png') no-repeat 88.75% center;
+    background-size: cover;
+}
+.work-step:nth-child(3):before {
+    content: '03';
+}
+.work-step:nth-child(4) .step-icon {
+    background: transparent url('../images/sprite-images.png') no-repeat 100% center;
+    background-size: cover;
+}
+.work-step:nth-child(4):before {
+    content: '04';
+}
+.work-step h4 {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
 /******************************
 ********** services *************
 ******************************/
-
+.services .row {
+    text-align: center;
+}
+.slider-services {
+    width: 100%;
+}
+.slide-services {
+    margin: 0 20px;
+    padding-bottom: 20px;
+}
+.service-header {
+    padding: 15px 25px 10px 25px;
+    background-color: #5cb85c;
+}
+.slide-services h4 {
+    padding: 0;
+    margin: 0;
+}
+.slide-services ul {
+    text-align: left;
+    padding: 10px 15px 10px 20px;
+    margin: 0;
+}
+.slide-services ul li {
+    display: block;
+    margin: 15px 0;
+    font-size: 14px;
+}
+.slide-services .service-cost {
+    font-family: 'Open Sans Light Italic', sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+.slide-services .service-cost span {
+    font-family: 'Open Sans Bold Italic', sans-serif;
+    font-size: 30px;
+}
+.slider-services-controls {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    position: static;
+    background: transparent;
+    text-decoration: underline;
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 14px;
+    margin-top: 50px;
+}
+.slider-services-controls:hover {
+    background: transparent;
+    text-decoration: none;
+}
+.slider-services-left {
+    margin-right: 200px;
+}
+.slider-services .slick-dots {
+    width: 200px;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+.slider-services .slick-dots li {
+    margin: 0 5px;
+}
+.slider-services .slick-dots button {
+    color: transparent;
+    font-size: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #d5e1e7;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.slider-services .slick-dots button:hover, .slider-services .slick-dots .slick-active button {
+    background-color: #5cb85c;
+}
+.slider-services.slick-slider {
+    position: static;
+}
 /******************************
 ********** questions *************
 ******************************/
 .questions {
     background: transparent url('../images/background-questions.jpg') no-repeat center;
     background-size: cover;
+    padding: 100px 0 80px;
 }
 .form-ask-question-wrap {
-    border: 7px solid rgba(134, 135, 138, 0.4);
-    margin: 100px 0 80px;
+    border: 7px solid rgba(134, 135, 138, 0.38);
     width: 100%;
 }
 .form-ask-question {
@@ -200,7 +463,7 @@ textarea {
     position: relative;
     top: -21px;
     left: 19px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.75);
     text-align: center;
     padding: 45px;
 }
@@ -213,10 +476,50 @@ textarea {
     width: 100%;
     max-width: 700px;
     margin: 50px auto 30px;
-    border: 1px solid green;
+    padding: 0;
+    border: none;
+}
+.form-ask-question .form-field {
+    margin-top: 10px;
 }
 .form-ask-question .form-textarea-wrap {
-    width: 700px;
+    width: 100%;
+    margin-top: 25px;
+    height: 75px;
+}
+/******************************
+********** reviews *************
+******************************/
+.review-image {
+    width: 30%;
+    height: 369px;
+    border: 1px solid #d5e2e9;
+    float: left;
+    margin-right: 80px;
+    position: relative;
+}
+.review-image img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.reviewer {
+    margin-top: 20px;
+}
+.reviewer, .reviewer span {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 14px;
+}
+.reviewer-city {
+    margin-left: 10px;
+}
+.review-text p {
+    padding-right: 10px;
+    font-family: 'Open Sans Italic', sans-serif;
+    margin: 30px 0 0 0;
 }
 /******************************
 ********** achievements *************
@@ -225,10 +528,46 @@ textarea {
     background: transparent url('../images/background-acievments.jpg') no-repeat center;
     background-size: cover;
 }
+.achievement {
+    border: 7px solid #cdd8de;
+    margin-top: 60px;
+}
+.achievement:first-child {
+    margin-top: 20px;
+}
+.achievement:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.achievement-image {
+    width: 165px;
+    height: 227px;
+    float: left;
+    margin-right: 15px;
+    background-color: #ffffff;
+    position: relative;
+    top: -21px;
+    left: -19px;
+}
+.achievement-image img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.achievement-text {
+    min-height: 227px;
+    padding: 5px 20px 5px 0;
+}
 /******************************
 ********** certificates *************
 ******************************/
-
+.slide-certificate {
+    margin: 0 10px;
+}
 /******************************
 ********** contacts *************
 ******************************/
