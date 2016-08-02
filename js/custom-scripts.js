@@ -1,5 +1,16 @@
 $(document).ready(function () {
 
+    $('nav ul li a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        if($(window).width < 769) {
+            $('html, body').stop().animate({scrollTop: $(target).offset().top}, 800);
+        } else {
+            $('html, body').stop().animate({scrollTop: $(target).offset().top}, 1500);
+        }
+
+        return false;
+    });
+
     $('.callback').click(function () {
         $('.window-callback').fadeIn();
     });
@@ -88,7 +99,7 @@ $(document).ready(function () {
             {
                 breakpoint: 480,
                 settings: {
-
+                    arrows: false
                 }
             }
         ]

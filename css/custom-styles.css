@@ -336,7 +336,7 @@ nav ul {
 nav ul li a {
     color: rgba(255, 255, 255, 0.9)
 }
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     color: rgba(255, 255, 255, 1)
 }
 
@@ -1437,6 +1437,9 @@ footer p, footer p span {
     .slider-modal-controls {
         display: none;
     }
+    header .in-touch:before {
+        left: 10px;
+    }
 }
 @media (max-width: 480px) {
     .advantage {
@@ -1533,6 +1536,12 @@ footer p, footer p span {
         font-size: 24px;
         font-weight: 600;
         color: #000000;
+    }
+    header .in-touch:before {
+        left: 30px;
+    }
+    .slider-reviews-controls {
+        display: none;
     }
 }
 @media (max-width: 400px) {
