@@ -395,7 +395,7 @@ nav ul li a:hover {
 }
 .form-make-an-appointment .form-title {
     font-family: 'Intro', sans-serif;
-    font-size: 22px;
+    font-size: 21px;
     margin-top: 0;
 }
 .form-make-an-appointment .text {
@@ -427,7 +427,7 @@ nav ul li a:hover {
     height: auto;
     min-height: 30px;
     line-height: 1;
-    padding: 5px 0;
+    padding: 9px 0;
 }
 /******************************
 ********** divorce lawyer *************
@@ -1040,6 +1040,84 @@ footer p, footer p span {
     font-size: 14px;
     padding: 12px 0;
 }
+
+/******************************
+********** modals *************
+******************************/
+.modal-window {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 10;
+}
+.modal-wrap {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    text-align: center;
+    padding: 0;
+    border: 8px solid rgba(255, 255, 255, 0.38);
+    z-index: 10;
+}
+.modal-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 15px;
+    left: 15px;
+    background-color: #d5e1e7;
+    padding: 20px;
+}
+.modal-callback-wrap {
+    width: 460px;
+    height: 330px;
+}
+.modal-question-wrap {
+    width: 460px;
+    height: 450px;
+}
+.close-marker {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #8aa7b6;
+    cursor: pointer;
+    font-size: 20px;
+}
+.close-marker:hover {
+    color: #e45b53;
+}
+.modal-inner .form-title {
+    font-family: 'Intro', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.modal-inner .text {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 14px;
+}
+.modal-inner .form-field-wrap {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 320px;
+}
+.modal-inner .form-textarea-wrap {
+    height: 100px;
+}
+.modal-inner .form-submit {
+    margin-top: 25px;
+}
+
+
 /******************************
 ****** media queries **********
 ******************************/
@@ -1405,6 +1483,15 @@ footer p, footer p span {
         display: block;
         width: 100%;
         margin-left: 20px;
+    }
+    .modal-wrap {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .modal-inner {
+        left: 0;
+        bottom: 0;
     }
 }
 

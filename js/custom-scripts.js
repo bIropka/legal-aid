@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    $('.callback').click(function () {
+        $('.window-callback').fadeIn();
+    });
+
+    $('.button-ask-question').click(function () {
+        $('.window-ask-question').fadeIn();
+    });
+
+    $('.modal-window').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.modal-wrap')).length) $('.modal-window').fadeOut();
+        if ($target.hasClass('close-marker')) $('.modal-window').fadeOut();
+    });
 
     /** scripts for sliders **/
 
