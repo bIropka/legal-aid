@@ -15,21 +15,21 @@ $(document).ready(function () {
         nextArrow: '.slider-services-right',
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1201,
                 settings: {
-
+                    slidesToShow: 3
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 993,
                 settings: {
-
+                    slidesToShow: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 541,
                 settings: {
-
+                    slidesToShow: 1
                 }
             }
         ]
@@ -73,21 +73,21 @@ $(document).ready(function () {
         nextArrow: '.slider-certificates-right',
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 993,
                 settings: {
-
+                    slidesToShow: 4
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 640,
                 settings: {
-
+                    slidesToShow: 3
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-
+                    slidesToShow: 1
                 }
             }
         ]

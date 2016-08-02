@@ -68,8 +68,16 @@ img {
 }
 
 h1 {
-    /*font-family: 'Intro', sans-serif;
-    font-size: 36px;*/
+    font-family: 'Intro', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+}
+h1 span {
+    display: block;
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 30px;
 }
 h2 {
     font-family: 'Intro', sans-serif;
@@ -104,11 +112,7 @@ ul li {
 }
 
 .container, .container .row div {
-    outline: 1px solid #ff0000;
-}
-
-nav ul {
-    padding-left: 0;
+    /*outline: 1px solid #ff0000;*/
 }
 
 .text-green {color: #5cb85c;}
@@ -262,7 +266,79 @@ section {
 /******************************
 ********** header *************
 ******************************/
-
+header {
+    padding: 17px 0;
+}
+header .row>div{
+    height: 84px;
+}
+header .logo {
+    display: block;
+    width: 80%;
+    padding-top: 47%;
+    margin: 0 auto;
+    /*overflow-y: hidden;*/
+    position: relative;
+}
+header .logo img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+header .address {
+    margin: 0;
+    padding-left: 50px;
+}
+header .address p {
+    margin: 0;
+}
+header .address:before {
+    left: 0;
+    top: 0;
+    bottom: auto;
+}
+header .in-touch {
+    margin: 0;
+    padding-left: 0;
+    text-align: right;
+}
+header .in-touch a {
+    line-height: 1;
+}
+header .in-touch p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+header .in-touch .callback {
+    width: 195px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #e45b53;
+    text-align: center;
+}
+header .in-touch .callback:hover {
+    background-color: #d0524a;
+}
+header .in-touch:before {
+    left: 30px;
+    top: 0;
+    bottom: auto;
+}
+nav {
+    background-color: #175d7f;
+}
+nav ul {
+    padding-left: 0;
+}
+nav ul li a {
+    color: rgba(255, 255, 255, 0.9)
+}
+nav ul li a:hover {
+    color: rgba(255, 255, 255, 1)
+}
 
 /******************************
 ********** about us *************
@@ -270,19 +346,104 @@ section {
 .about-us {
     background: transparent url('../images/background-about-us.jpg') no-repeat center;
     background-size: cover;
+    padding: 115px 0 120px;
+}
+.about-us .row {
+    position: relative;
+}
+.about-us .row>div {
+    position: static;
+}
+.about-us h2, .about-us h3 {
+    text-align: left;
+}
+.about-us h2 {
+    margin-top: 25px;
+}
+.about-us ul {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.about-us ul li {
+    display: block;
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 24px;
+    padding-left: 35px;
+    position: relative;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.about-us ul li:before {
+    content:'\2713';
+    color: #e45b53;
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.form-make-an-appointment-wrap {
+    border: 7px solid rgba(255, 255, 255, 0.38);
+}
+.form-make-an-appointment {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.85);
+    position: relative;
+    left: 19px;
+    top: -21px;
+}
+.form-make-an-appointment .form-title {
+    font-family: 'Intro', sans-serif;
+    font-size: 22px;
+    margin-top: 0;
+}
+.form-make-an-appointment .text {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 14px;
+}
+.form-make-an-appointment ol {
+    padding-left: 0;
+    list-style-position: inside;
+}
+.form-make-an-appointment ol li {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 14px;
+}
+.form-make-an-appointment .form-field-wrap {
+    display: block;
+    margin: 0 auto 15px;
+    width: 80%;
+    max-width: 320px;
+}
+.form-make-an-appointment .form-textarea-wrap {
+    height: 100px;
+}
+.form-make-an-appointment .form-submit {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    white-space: normal;
+    height: auto;
+    min-height: 30px;
+    line-height: 1;
+    padding: 5px 0;
 }
 /******************************
 ********** divorce lawyer *************
 ******************************/
 .divorce-lawyer {
     text-align: right;
+    padding-top: 100px;
 }
 .divorce-lawyer-photo {
-    width: 30%;
-    padding-top: 43%;
+    width: 360px;
+    height: 525px;
     position: relative;
     overflow-y: hidden;
     float: left;
+    margin-right: 30px;
+    top: -40px;
 }
 .divorce-lawyer-photo img {
     position: absolute;
@@ -295,6 +456,28 @@ section {
     margin-left: 20%;
     width: 80%;
     border: 8px solid #eaf0f3;
+    text-align: left;
+    height: 525px;
+    padding: 0 30px 30px 0;
+}
+.divorce-lawyer-info h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.divorce-lawyer-name {
+    font-family: 'Intro', sans-serif;
+    font-size: 30px;
+    margin: 30px 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.divorce-lawyer-info .text {
+    max-height: 335px;
+    overflow-y: hidden;
 }
 /******************************
 ********** ask question block *************
@@ -329,11 +512,15 @@ section {
 /******************************
 ********** advantages *************
 ******************************/
+.advantage:last-child {
+    margin-bottom: 60px;
+}
 .advantage {
     width: 165px;
     height: 165px;
     border: 8px solid #d5e1e7;
     position: relative;
+    margin-bottom: 30px;
 }
 .advantage-icon {
     display: block;
@@ -389,6 +576,19 @@ section {
     display: block;
     font-size: 14px;
 }
+.advantages .read-more {
+    display: block;
+    width: 115px;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 14px;
+    border-bottom: 1px dashed #175d7f;
+    cursor: pointer;
+}
+.advantages .read-more:hover {
+    border-bottom: 1px dashed transparent;
+}
 /******************************
 ********** our-team *************
 ******************************/
@@ -400,6 +600,7 @@ section {
     text-align: center;
     background-color: #ffffff;
     height: 380px;
+    margin-bottom: 30px;
 }
 .specialist-photo {
     width: 100%;
@@ -462,7 +663,6 @@ section {
     position: absolute;
     top: -8px;
     left: -8px;
-    outline:1px solid red;
 }
 .step-icon {
     width: 125px;
@@ -473,32 +673,32 @@ section {
     bottom: 0;
     top: 0;
 }
-.work-step:nth-child(1) .step-icon {
+.work-step.step-1 .step-icon {
     background: transparent url('../images/sprite-images.png') no-repeat 66.5% center;
     background-size: cover;
 }
-.work-step:nth-child(1):before {
+.work-step.step-1:before {
     content: '01';
 }
-.work-step:nth-child(2) .step-icon {
+.work-step.step-2 .step-icon {
     background: transparent url('../images/sprite-images.png') no-repeat 77.75% center;
     background-size: cover;
 }
-.work-step:nth-child(2):before {
+.work-step.step-2:before {
     content: '02';
 }
-.work-step:nth-child(3) .step-icon {
+.work-step.step-3 .step-icon {
     background: transparent url('../images/sprite-images.png') no-repeat 88.75% center;
     background-size: cover;
 }
-.work-step:nth-child(3):before {
+.work-step.step-3:before {
     content: '03';
 }
-.work-step:nth-child(4) .step-icon {
+.work-step.step-4 .step-icon {
     background: transparent url('../images/sprite-images.png') no-repeat 100% center;
     background-size: cover;
 }
-.work-step:nth-child(4):before {
+.work-step.step-4:before {
     content: '04';
 }
 .work-step h4, .work-step .text {
@@ -532,6 +732,7 @@ section {
 .slide-services {
     margin: 0 20px;
     padding-bottom: 20px;
+    background-color: #ffffff;
 }
 .service-header {
     padding: 15px 25px 10px 25px;
@@ -550,6 +751,14 @@ section {
     display: block;
     margin: 15px 0;
     font-size: 14px;
+    position: relative;
+}
+.slide-services ul li:before {
+    content: '\2022';
+    color: #175d7f;
+    position: absolute;
+    left: -10px;
+    top: 0;
 }
 .slide-services .service-cost {
     font-family: 'Open Sans Light Italic', sans-serif;
@@ -644,6 +853,9 @@ section {
     padding: 0;
     border: none;
 }
+.form-ask-question .form-field-wrap {
+    max-width: 100%;
+}
 .form-ask-question .form-field {
     margin-top: 10px;
 }
@@ -656,8 +868,8 @@ section {
 ********** reviews *************
 ******************************/
 .review-image {
-    width: 30%;
-    height: 369px;
+    width: 310px;
+    height: 370px;
     border: 1px solid #d5e2e9;
     float: left;
     margin-right: 80px;
@@ -749,7 +961,8 @@ section {
     left: 0;
 }
 .contacts-inner-wrap {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 350px;
     position: absolute;
     left: 20%;
@@ -778,7 +991,7 @@ section {
     display: block;
     width: 40px;
     height: 40px;
-    background: transparent url('../images/sprite-icons.png') no-repeat center;
+    background: transparent url('../images/sprite-icons.png') no-repeat 4% center;
     background-size: cover;
     position: absolute;
     margin: auto;
@@ -787,7 +1000,7 @@ section {
     bottom: 0;
 }
 .in-touch:before {
-    background: transparent url('../images/sprite-icons.png') no-repeat 4% center;
+    background: transparent url('../images/sprite-icons.png') no-repeat center;
     background-size: cover;
 }
 .email:before {
@@ -827,4 +1040,373 @@ footer p, footer p span {
     font-size: 14px;
     padding: 12px 0;
 }
+/******************************
+****** media queries **********
+******************************/
+@media (max-width: 1200px) {
+    h1, header .in-touch a, header .in-touch a span {
+        font-size: 18px;
+    }
+    h1 span {
+        font-size: 22px;
+    }
+    header .in-touch .callback {
+        font-size: 14px;
+        width: 160px;
+    }
+    header .address p {
+        width: 120px;
+        font-size: 14px;
+    }
+    .form-make-an-appointment .form-title {
+        font-size: 16px;
+    }
+    .form-make-an-appointment .text, .form-make-an-appointment ol li {
+        font-size: 12px;
+    }
+    .form-make-an-appointment .form-field-wrap {
+        width: 100%;
+    }
+    .divorce-lawyer-name {
+        font-size: 22px;
+    }
+    .divorce-lawyer-info h3 {
+        font-size: 22px;
+    }
+    .divorce-lawyer-info .text p {
+        font-size: 13px;
+    }
+    .ask-question-block .text-white {
+        font-size: 24px;
+    }
+    .work-step {
+        margin: 40px 0;
+    }
+    .contacts-inner-wrap {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    header .logo {
+        width: 50%;
+        padding-top: 30%;
+    }
+    header .address p {
+        float: right;
+    }
+    header .address:before {
+        left: auto;
+        right: 140px;
+    }
+    .about-us ul {
+        position: static;
+        margin-bottom: 60px;
+    }
+    .form-make-an-appointment-wrap {
+        width: 50%;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+    .divorce-lawyer {
+        padding-top: 50px;
+    }
+    .divorce-lawyer-photo {
+        float: none;
+        top: 0;
+        left: 0;
+        margin: 0 auto 30px;
+    }
+    .divorce-lawyer-info {
+        width: 100%;
+        margin: 0;
+        padding: 25px;
+        height: auto;
+    }
+    .divorce-lawyer-name {
+        margin-top: 0;
+        white-space: normal;
+    }
+    .divorce-lawyer-info .text {
+        height: auto;
+        max-height: none;
+    }
+    .divorce-lawyer h3 {
+        white-space: normal;
+    }
+    .ask-question-block {
+        -moz-text-align-last: center;
+        -ms-text-align-last: center;
+        text-align-last: center;
+        text-align: center;
+        padding: 10px 0 20px;
+    }
+    .ask-question-block .text-white {
+        width: 100%;
+        height: auto;
+        line-height: 1;
+    }
+    .achievement {
+        width: 90%;
+        border: 7px solid #cdd8de;
+        margin: 60px auto 0;
+    }
+    .about-us {
+        padding: 50px 0 70px;
+    }
+    .review-image {
+        margin-right: 20px;
+    }
+    .review-text p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo {
+        width: 110px;
+        padding-top: 66px;
+        float: right;
+    }
+    header .in-touch a, header .in-touch p, header .in-touch .callback {
+        display: block;
+        width: 160px;
+        margin-left: 40px;
+    }
+    header .in-touch:before {
+        left: 0;
+    }
+    nav .in-wide {
+        -moz-text-align-last: center;
+        -ms-text-align-last: center;
+        text-align-last: center;
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        border-bottom: 1px solid #ffffff;
+    }
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    nav ul li a {
+        display: block;
+        padding: 5px 0;
+    }
+    .specialist {
+        max-width: 320px;
+        height: auto;
+        padding-bottom: 20px;
+        margin: 0 auto 30px;
+    }
+    .form-ask-question {
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+    .form-ask-question .form-field-wrap {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .contacts {
+        padding: 0;
+        height: auto;
+    }
+    .contacts-inner-wrap {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: static;
+        border: none;
+        padding: 0;
+    }
+    .contacts-inner {
+        left: 0;
+        top: 0;
+        position: static;
+    }
+    .on-map {
+        position: static;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    section {
+        padding: 25px 0;
+    }
+    .form-make-an-appointment-wrap {
+        width: 100%;
+        max-width: 400px;
+    }
+    .form-make-an-appointment {
+        top: 0;
+        left: 0;
+    }
+    .divorce-lawyer-info .text {
+        overflow-y: visible;
+    }
+    .show-all-specialists {
+        margin: 20px auto 0;
+    }
+    .work-scheme h3 {
+        margin-bottom: 0;
+    }
+    .work-step {
+        max-width: 350px;
+        margin: 70px auto;
+    }
+    .work-step .text {
+        height: auto;
+        top: 100%;
+        overflow-y: visible;
+    }
+    .form-ask-question fieldset {
+        margin: 20px auto;
+    }
+    .review-image {
+        display: block;
+        float: none;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .review {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 480px) {
+    .advantage {
+        width: 290px;
+        border: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .advantage-icon, .advantage-info {
+        position: static;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .achievement-image {
+        float: none;
+        top: 0;
+        left: 0;
+        margin: 10px auto 0;
+    }
+    .achievement-text {
+        padding: 0 20px;
+    }
+    .slider-services-left {
+        margin-right: 20px;
+    }
+    .services {
+        padding-bottom: 40px;
+    }
+    .services .slick-dots {
+        bottom: 30px;
+    }
+    h1, header .in-touch a, header .in-touch a span {
+        font-size: 16px;
+    }
+    h1 span {
+        font-size: 18px;
+    }
+    header .address {
+        padding-left: 15px;
+    }
+    header .address p {
+        font-size: 12px;
+    }
+    .address:before, .in-touch:before, .email:before {
+        width: 25px;
+        height: 25px;
+        left: 0;
+        right: auto;
+    }
+    header .in-touch .callback {
+        width: 100%;
+        margin: 0;
+    }
+    .divorce-lawyer-photo {
+        width: 100%;
+        height: auto;
+        position: static;
+        overflow-y: visible;
+    }
+    .divorce-lawyer-photo {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .button-green {
+        width: 90%;
+    }
+    .contacts-inner {
+        padding: 20px 10px;
+    }
+    .contacts-inner .address, .contacts-inner .in-touch, .contacts-inner .email {
+        padding-left: 40px;
+    }
+    .form-make-an-appointment {
+        padding: 25px 10px;
+    }
+    .form-make-an-appointment-wrap {
+        border: none;
+        margin: 0;
+    }
+    .form-make-an-appointment .form-submit {
+        font-size: 14px;
+    }
+}
+@media (max-width: 360px) {
+    header .address p {
+        font-size: 10px;
+    }
+    h1  {
+        font-size: 12px;
+    }
+    h1 span {
+        font-size: 14px;
+    }
+    header .row {
+        margin: 0;
+    }
+    header .logo {
+        width: 100%;
+        padding-top: 0;
+        float: none;
+    }
+    header .logo img {
+        position: static;
+    }
+    header .address p {
+        width: 100%;
+    }
+    header .address:before {
+        left: -10px;
+        right: auto;
+    }
+    header .in-touch:before {
+        left: -5px;
+        right: auto;
+    }
+    header .in-touch {
+        text-align: left;
+    }
+    header .in-touch a, header .in-touch p, header .in-touch .callback {
+        display: block;
+        width: 100%;
+        margin-left: 20px;
+    }
+}
+
+
 
