@@ -8,10 +8,28 @@ $(document).ready(function () {
         $('.window-ask-question').fadeIn();
     });
 
+    $('.advantages .read-more').click(function () {
+        $('.window-advantages').fadeIn();
+    });
+
+    $('.show-all-specialists').click(function () {
+        $('.window-team').fadeIn();
+        $('.slider-modal').slick('slickNext');
+        setTimeout(function() {
+            $('.modal-team-wrap').css('opacity', 1);
+        }, 500);
+    });
+
     $('.modal-window').click(function (event) {
         $target = $(event.target);
-        if (!$target.closest($('.modal-wrap')).length) $('.modal-window').fadeOut();
-        if ($target.hasClass('close-marker')) $('.modal-window').fadeOut();
+        if (!$target.closest($('.modal-wrap')).length){
+            $('.modal-window').fadeOut();
+            $('.modal-team-wrap').css('opacity', 0);
+        }
+        if ($target.hasClass('close-marker')){
+            $('.modal-window').fadeOut();
+            $('.modal-team-wrap').css('opacity', 0);
+        }
     });
 
     /** scripts for sliders **/
@@ -101,6 +119,32 @@ $(document).ready(function () {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.slider-modal').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        pauseOnDotsHover: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        appendArrows: '.slider-modal-controls',
+        prevArrow: '.slider-modal-left',
+        nextArrow: '.slider-modal-right',
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
                 }
             }
         ]
