@@ -1,56 +1,48 @@
 @font-face {
     font-family: 'Open Sans Regular';
-    src: url("../fonts/OpenSans-Regular.eot");
-    src: url("../fonts/OpenSans-Regular.eot") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.svg") format("svg");
+    src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans Italic';
-    src: url("../fonts/OpenSans-Italic.eot");
-    src: url("../fonts/OpenSans-Italic.eot") format("embedded-opentype"), url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff"), url("../fonts/OpenSans-Italic.ttf") format("truetype"), url("../fonts/OpenSans-Italic.svg") format("svg");
+    src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff"), url("../fonts/OpenSans-Italic.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans Semibold';
-    src: url("../fonts/OpenSans-Semibold.eot");
-    src: url("../fonts/OpenSans-Semibold.eot") format("embedded-opentype"), url("../fonts/OpenSans-Semibold.woff2") format("woff2"), url("../fonts/OpenSans-Semibold.woff") format("woff"), url("../fonts/OpenSans-Semibold.ttf") format("truetype"), url("../fonts/OpenSans-Semibold.svg") format("svg");
+    src: url("../fonts/OpenSans-Semibold.woff2") format("woff2"), url("../fonts/OpenSans-Semibold.woff") format("woff"), url("../fonts/OpenSans-Semibold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans Bold';
-    src: url("../fonts/OpenSans-Bold.eot");
-    src: url("../fonts/OpenSans-Bold.eot") format("embedded-opentype"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans-Bold.svg") format("svg");
+    src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans Bold Italic';
-    src: url("../fonts/OpenSans-BoldItalic.eot");
-    src: url("../fonts/OpenSans-BoldItalic.eot") format("embedded-opentype"), url("../fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-BoldItalic.woff") format("woff"), url("../fonts/OpenSans-BoldItalic.ttf") format("truetype"), url("../fonts/OpenSans-BoldItalic.svg") format("svg");
+    src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-BoldItalic.woff") format("woff"), url("../fonts/OpenSans-BoldItalic.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans Light';
-    src: url("../fonts/OpenSans-Light.eot");
-    src: url("../fonts/OpenSans-Light.eot") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype"), url("../fonts/OpenSans-Light.svg") format("svg");
+    src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans Light Italic';
-    src: url("../fonts/OpenSans-LightItalic.eot");
-    src: url("../fonts/OpenSans-LightItalic.eot") format("embedded-opentype"), url("../fonts/OpenSans-LightItalic.woff2") format("woff2"), url("../fonts/OpenSans-LightItalic.woff") format("woff"), url("../fonts/OpenSans-LightItalic.ttf") format("truetype"), url("../fonts/OpenSans-LightItalic.svg") format("svg");
+    src: url("../fonts/OpenSans-LightItalic.woff2") format("woff2"), url("../fonts/OpenSans-LightItalic.woff") format("woff"), url("../fonts/OpenSans-LightItalic.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Intro';
-    src: url("../fonts/Intro.eot");
-    src: url("../fonts/Intro.eot") format("embedded-opentype"), url("../fonts/Intro.otf") format("opentype"), url("../fonts/Intro.woff") format("woff"), url("../fonts/Intro.ttf") format("truetype"), url("../fonts/Intro.svg") format("svg");
+    src: url("../fonts/Intro.otf") format("opentype"), url("../fonts/Intro.woff") format("woff"), url("../fonts/Intro.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
@@ -471,7 +463,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     text-overflow: ellipsis;
 }
 .divorce-lawyer-info .text {
-    max-height: 335px;
+    max-height: 345px;
     overflow-y: hidden;
 }
 /******************************
@@ -964,6 +956,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     top: 30%;
     border: 7px solid #175d7f;
     padding: 0;
+    z-index: 1;
 }
 .contacts-inner {
     width: 100%;
