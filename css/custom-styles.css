@@ -1092,7 +1092,7 @@ footer p, footer p span {
 }
 .modal-advantages-wrap h2, .modal-specialist-wrap h2 {
     font-size: 30px;
-    margin-bottom: 30px;
+    margin: 15px 0 30px;
 }
 .modal-advantages-wrap p, .modal-specialist-wrap p {
     margin: 20px;
@@ -1452,8 +1452,8 @@ footer p, footer p span {
         display: none;
     }
     .review {
-        height: 220px;
-        width: 80%;
+        height: 300px;
+        width: 100%;
         margin: 0 auto;
     }
     .review-text p {
