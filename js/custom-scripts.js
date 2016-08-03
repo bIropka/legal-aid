@@ -31,6 +31,10 @@ $(document).ready(function () {
         }, 500);
     });
 
+    $('.show-specialist').click(function() {
+        $(this).siblings('.modal-window').fadeIn();
+    });
+
     $('.modal-window').click(function (event) {
         $target = $(event.target);
         if (!$target.closest($('.modal-wrap')).length){
@@ -50,8 +54,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         dots: true,
         pauseOnDotsHover: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
+        autoplay: false,
         appendArrows: '.slider-services-controls',
         prevArrow: '.slider-services-left',
         nextArrow: '.slider-services-right',
@@ -78,8 +81,7 @@ $(document).ready(function () {
     });
 
     $('.slider-reviews').slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
+        autoplay: false,
         appendArrows: '.slider-reviews-controls',
         prevArrow: '.slider-reviews-left',
         nextArrow: '.slider-reviews-right',
@@ -108,8 +110,7 @@ $(document).ready(function () {
     $('.slider-certificates').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
+        autoplay: false,
         appendArrows: '.slider-certificates-controls',
         prevArrow: '.slider-certificates-left',
         nextArrow: '.slider-certificates-right',
@@ -135,12 +136,11 @@ $(document).ready(function () {
         ]
     });
 
-    $('.slider-modal').slick({
+    /*$('.slider-modal').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         pauseOnDotsHover: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
+        autoplay: false,
         appendArrows: '.slider-modal-controls',
         prevArrow: '.slider-modal-left',
         nextArrow: '.slider-modal-right',
