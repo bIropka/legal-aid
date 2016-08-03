@@ -50,7 +50,7 @@
 @font-face {
     font-family: 'Intro';
     src: url("../fonts/Intro.eot");
-    src: url("../fonts/Intro.eot") format("embedded-opentype"), url("../fonts/Intro.woff") format("woff"), url("../fonts/Intro.ttf") format("truetype"), url("../fonts/Intro.svg") format("svg");
+    src: url("../fonts/Intro.eot") format("embedded-opentype"), url("../fonts/Intro.otf") format("opentype"), url("../fonts/Intro.woff") format("woff"), url("../fonts/Intro.ttf") format("truetype"), url("../fonts/Intro.svg") format("svg");
     font-weight: 300;
     font-style: normal;
 }
