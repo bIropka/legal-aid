@@ -59,18 +59,6 @@ img {
     height: auto;
 }
 
-h1 {
-    font-family: 'Intro', sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 100;
-    margin: 0;
-}
-h1 span {
-    display: block;
-    font-family: 'Open Sans Light', sans-serif;
-    font-size: 22px;
-}
 h2 {
     font-family: 'Intro', sans-serif;
     font-size: 36px;
@@ -257,26 +245,30 @@ section {
 header {
     padding: 17px 0;
 }
-header .row>div{
-    height: 84px;
-}
 header .logo {
     display: block;
-    width: 80%;
-    padding-top: 47%;
-    margin: 0 auto;
-    position: relative;
+    float: left;
+    width: 165px;
 }
-header .logo img {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+header .tagline {
+    float: left;
+    margin: 10px 0 0 20px;
+}
+h1 {
+    font-family: 'Intro', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+}
+h1 span {
+    display: block;
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 22px;
 }
 header .address {
-    margin: 0;
+    display: block;
+    float: right;
     padding-left: 50px;
 }
 header .address p {
@@ -288,8 +280,9 @@ header .address:before {
     bottom: auto;
 }
 header .in-touch {
-    margin: 0;
-    padding-left: 0;
+    display: block;
+    float: right;
+    padding-left: 70px;
     text-align: right;
 }
 header .in-touch a {
@@ -587,6 +580,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     text-align: center;
     background-color: #ffffff;
     height: 380px;
+    margin: 10px 0;
 }
 .specialist:hover .specialist-photo {
     outline: 1px solid #cccccc;
@@ -1170,20 +1164,6 @@ footer p, footer p span {
 ****** media queries **********
 ******************************/
 @media (max-width: 1200px) {
-    h1, header .in-touch a, header .in-touch a span {
-        font-size: 18px;
-    }
-    h1 span {
-        font-size: 22px;
-    }
-    header .in-touch .callback {
-        font-size: 14px;
-        width: 160px;
-    }
-    header .address p {
-        width: 120px;
-        font-size: 14px;
-    }
     .form-make-an-appointment .form-title {
         font-size: 16px;
     }
@@ -1213,7 +1193,7 @@ footer p, footer p span {
         right: 0;
         margin: auto;
     }
-    .modal-advantages-wrap {
+    .modal-advantages-wrap, .modal-specialist-wrap {
         width: 100%;
         height: 100%;
         border: none;
@@ -1221,32 +1201,27 @@ footer p, footer p span {
     .modal-team-wrap {
         width: 768px;
     }
-    .modal-team-wrap .modal-inner, .modal-advantages-wrap .modal-inner {
+    .modal-team-wrap .modal-inner, .modal-advantages-wrap .modal-inner, .modal-specialist-wrap .modal-inner {
         left: 0;
         bottom: 0;
         overflow: auto;
     }
-    .modal-advantages-wrap .close-marker {
+    .modal-advantages-wrap .close-marker, .modal-specialist-wrap .close-marker {
         font-size: 32px;
         font-weight: 600;
         color: #000000;
         right: 20px;
     }
+    .specialist:hover .specialist-photo {
+        outline: none;
+    }
+    .specialist:hover .specialist-name {
+        text-decoration: none;
+    }
 
 }
 
 @media (max-width: 992px) {
-    header .logo {
-        width: 50%;
-        padding-top: 30%;
-    }
-    header .address p {
-        float: right;
-    }
-    header .address:before {
-        left: auto;
-        right: 140px;
-    }
     .about-us ul {
         position: static;
         margin-bottom: 60px;
@@ -1311,16 +1286,6 @@ footer p, footer p span {
 }
 
 @media (max-width: 768px) {
-    header .logo {
-        width: 110px;
-        padding-top: 66px;
-        float: right;
-    }
-    header .in-touch a, header .in-touch p, header .in-touch .callback {
-        display: block;
-        width: 160px;
-        margin-left: 40px;
-    }
     nav .in-wide {
         -moz-text-align-last: center;
         -ms-text-align-last: center;
@@ -1432,9 +1397,6 @@ footer p, footer p span {
     .slider-modal-controls {
         display: none;
     }
-    header .in-touch:before {
-        left: 10px;
-    }
     .on-map {
         height: 300px;
         overflow: hidden;
@@ -1470,27 +1432,11 @@ footer p, footer p span {
     .services .slick-dots {
         bottom: 30px;
     }
-    h1, header .in-touch a, header .in-touch a span {
-        font-size: 16px;
-    }
-    h1 span {
-        font-size: 18px;
-    }
-    header .address {
-        padding-left: 15px;
-    }
-    header .address p {
-        font-size: 12px;
-    }
     .address:before, .in-touch:before, .email:before {
         width: 25px;
         height: 25px;
         left: 0;
         right: auto;
-    }
-    header .in-touch .callback {
-        width: 100%;
-        margin: 0;
     }
     .divorce-lawyer-photo {
         width: 100%;
@@ -1536,53 +1482,12 @@ footer p, footer p span {
         font-weight: 600;
         color: #000000;
     }
-    header .in-touch:before {
-        left: 30px;
-    }
     .slider-reviews-controls {
         display: none;
     }
 }
 @media (max-width: 400px) {
-    header .address p {
-        font-size: 10px;
-    }
-    h1  {
-        font-size: 12px;
-    }
-    h1 span {
-        font-size: 14px;
-    }
-    header .row {
-        margin: 0;
-    }
-    header .logo {
-        width: 100%;
-        padding-top: 0;
-        float: none;
-    }
-    header .logo img {
-        position: static;
-    }
-    header .address p {
-        width: 100%;
-    }
-    header .address:before {
-        left: -10px;
-        right: auto;
-    }
-    header .in-touch:before {
-        left: -5px;
-        right: auto;
-    }
-    header .in-touch {
-        text-align: left;
-    }
-    header .in-touch a, header .in-touch p, header .in-touch .callback {
-        display: block;
-        width: 100%;
-        margin-left: 20px;
-    }
+
 }
 
 
