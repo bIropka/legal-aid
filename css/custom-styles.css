@@ -243,7 +243,7 @@ section {
 ********** header *************
 ******************************/
 header {
-    padding: 17px 0;
+    padding: 7px 0 17px;
 }
 header .logo {
     display: block;
@@ -270,6 +270,7 @@ header .address {
     display: block;
     float: right;
     padding-left: 50px;
+    margin: 10px 0 0 0;
 }
 header .address p {
     margin: 0;
@@ -284,6 +285,7 @@ header .in-touch {
     float: right;
     padding-left: 70px;
     text-align: right;
+    margin: 10px 0 0 0;
 }
 header .in-touch a {
     line-height: 1;
@@ -295,7 +297,7 @@ header .in-touch p {
 header .in-touch .callback {
     width: 195px;
     height: 30px;
-    line-height: 30px;
+    line-height: 27px;
     background-color: #e45b53;
     text-align: center;
 }
@@ -309,7 +311,9 @@ header .in-touch:before {
 }
 nav {
     background-color: #175d7f;
-}
+}.burger {
+     display: none;
+ }
 nav ul {
     padding-left: 0;
 }
@@ -350,7 +354,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     display: block;
     font-family: 'Open Sans Light', sans-serif;
     font-size: 24px;
-    padding-left: 35px;
+    padding-left: 25px;
     position: relative;
     line-height: 30px;
     margin-bottom: 15px;
@@ -358,7 +362,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 .about-us ul li:before {
     content:'\2713';
     color: #e45b53;
-    font-size: 30px;
+    font-size: 24px;
     position: absolute;
     left: 0;
     top: 0;
@@ -632,7 +636,10 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 ********** work scheme *************
 ******************************/
 .work-scheme {
-    padding-bottom: 122px;
+    padding-bottom: 80px;
+}
+h3 {
+    margin: 0 0 10px;
 }
 .work-step {
     position: relative;
@@ -1222,6 +1229,30 @@ footer p, footer p span {
 }
 
 @media (max-width: 992px) {
+    header .logo {
+        margin-right: 20px;
+    }
+    header .tagline {
+        margin: 10px 0 0 0;
+    }
+    h1 {
+        font-size: 14px;
+    }
+    h1 span {
+        font-size: 16px;
+    }
+    header .address {
+        float: left;
+        padding-left: 35px;
+    }
+    header .in-touch {
+        padding-left: 40px;
+    }
+    header .in-touch:before, header .address:before {
+        width: 30px;
+        height: 30px;
+        left: 0;
+    }
     .about-us ul {
         position: static;
         margin-bottom: 60px;
@@ -1286,11 +1317,51 @@ footer p, footer p span {
 }
 
 @media (max-width: 768px) {
+    header .in-touch {
+        padding-left: 0;
+    }
+    header .in-touch a, header .in-touch a span {
+        font-size: 19px;
+    }
+    header .address p {
+        font-size: 14px;
+    }
+    nav {
+        padding: 16px 0;
+        margin-top: 10px;
+    }
+    .burger {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+    .burger span {
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        font-family: 'Open Sans Bold', sans-serif;
+    }
+    .burger .to-show-map {
+        display: block;
+    }
+    .burger .to-hide-map {
+        display: none;
+    }
+    .burger.active .to-show-map {
+        display: none;
+    }
+    .burger.active .to-hide-map {
+        display: block;
+    }
     nav .in-wide {
         -moz-text-align-last: center;
         -ms-text-align-last: center;
         text-align-last: center;
         text-align: center;
+        margin: 0;
+        display: none;
     }
     nav ul li {
         display: block;
@@ -1378,14 +1449,22 @@ footer p, footer p span {
         margin: 20px auto;
     }
     .review-image {
-        display: block;
-        float: none;
-        max-width: 100%;
-        margin: 0 auto;
+        display: none;
     }
     .review {
+        height: 220px;
         width: 80%;
         margin: 0 auto;
+    }
+    .review-text p {
+        margin: 10px;
+    }
+    .achievement-image {
+        display: none;
+    }
+    .achievement-text {
+        min-height: 227px;
+        padding: 5px 20px;
     }
     .modal-team-wrap {
         width: 320px;
@@ -1400,6 +1479,72 @@ footer p, footer p span {
     .on-map {
         height: 300px;
         overflow: hidden;
+    }
+    .divorce-lawyer .row {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 640px) {
+    h1 {
+        font-size: 10px;
+    }
+    h1 span {
+        font-size: 12px;
+    }
+    header .address {
+        float: left;
+        padding-left: 22px;
+        margin-top: 15px;
+    }
+    header .in-touch {
+        padding-left: 0;
+    }
+    header .in-touch:before, header .address:before {
+        width: 20px;
+        height: 20px;
+        left: 0;
+    }
+    header .address p {
+        font-size: 13px;
+        width: 130px;
+    }
+    header .in-touch .callback {
+        width: 160px;
+        height: 25px;
+        line-height: 20px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    header .in-touch a, header .in-touch a span {
+        font-size: 16px;
+    }
+    header .in-touch p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 540px) {
+    header {
+        padding-bottom: 40px;
+        position: relative;
+    }
+    header .tagline {
+        position: absolute;
+        left: 30px;
+        bottom: 10px;
+    }
+    header .address {
+        width: 160px;
+        margin-top: 5px;
+        float: right;
+        padding-left: 30px;
+    }
+    header .in-touch {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+    }
+    header .in-touch .callback {
+        margin-top: 0;
     }
 }
 @media (max-width: 480px) {
@@ -1439,10 +1584,11 @@ footer p, footer p span {
         right: auto;
     }
     .divorce-lawyer-photo {
-        width: 100%;
+        width: 90%;
         height: auto;
         position: static;
         overflow-y: visible;
+        margin: 0 auto 30px;
     }
     .divorce-lawyer-photo img {
         position: static;
@@ -1463,7 +1609,7 @@ footer p, footer p span {
     }
     .form-make-an-appointment-wrap {
         border: none;
-        margin: 0;
+        margin: 0 auto;
     }
     .form-make-an-appointment .form-submit {
         font-size: 14px;
@@ -1485,8 +1631,57 @@ footer p, footer p span {
     .slider-reviews-controls {
         display: none;
     }
+    .divorce-lawyer-info {
+        padding: 25px 10px;
+    }
 }
 @media (max-width: 400px) {
+    header {
+        padding-bottom: 35px;
+    }
+    header .container {
+        padding: 0 10px;
+    }
+    header .logo {
+        width: 135px;
+        margin-right: 0;
+    }
+    h1 {
+        font-size: 8px;
+    }
+    h1 span {
+        font-size: 10px;
+    }
+    header .tagline {
+        bottom: 5px;
+        left: 25px;
+    }
+    header .in-touch {
+        bottom: 5px;
+        right: 10px;
+    }
+    header .in-touch p {
+        margin: 3px;
+    }
+    header .in-touch .callback, header .address {
+        width: 150px;
+    }
+    header .in-touch a, header .in-touch a span {
+        font-size: 14px;
+    }
+    .form-make-an-appointment-wrap {
+        min-width: 0;
+    }
+    .form-make-an-appointment .form-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .form-make-an-appointment .text, .form-make-an-appointment ol {
+        margin: 0 0 5px 0;
+    }
+    .form-make-an-appointment .form-field-wrap {
+        margin: 0 auto 10px;
+    }
 
 }
 

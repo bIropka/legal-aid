@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+    $('.burger').click(function() {
+        $(this).toggleClass('active');
+        $(this).siblings('ul').slideToggle();
+    });
+
     $('nav ul li a[href^="#"]').click(function(){
         var target = $(this).attr('href');
         if($(window).width < 769) {
