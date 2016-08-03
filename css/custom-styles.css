@@ -1440,6 +1440,10 @@ footer p, footer p span {
     header .in-touch:before {
         left: 10px;
     }
+    .on-map {
+        height: 300px;
+        overflow: hidden;
+    }
 }
 @media (max-width: 480px) {
     .advantage {
