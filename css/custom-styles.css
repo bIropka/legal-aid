@@ -1483,6 +1483,27 @@ footer p, footer p span {
     .divorce-lawyer .row {
         padding: 0 15px;
     }
+    .contacts-inner {
+        -moz-text-align-last: justify;
+        -ms-text-align-last: justify;
+        text-align-last: justify;
+        text-align: justify;
+    }
+    .contacts-inner h2 {
+        -moz-text-align-last: center;
+        -ms-text-align-last: center;
+        text-align-last: center;
+        text-align: center;
+    }
+    .contacts-inner>div {
+        -moz-text-align-last: left;
+        -ms-text-align-last: left;
+        text-align-last: left;
+        text-align: left;
+    }
+    .contacts .address, .contacts .in-touch {
+        display: inline-block;
+    }
 }
 @media (max-width: 640px) {
     h1 {
@@ -1521,6 +1542,15 @@ footer p, footer p span {
     header .in-touch p {
         font-size: 12px;
     }
+    .contacts .address, .contacts .in-touch {
+        padding-left: 50px;
+    }
+    .contacts .in-touch a, .contacts .in-touch a span {
+        font-size: 18px;
+    }
+    .contacts .in-touch {
+        margin: 20px 0 10px;
+    }
 }
 @media (max-width: 540px) {
     header {
@@ -1545,6 +1575,15 @@ footer p, footer p span {
     }
     header .in-touch .callback {
         margin-top: 0;
+    }
+    .contacts-inner {
+        padding: 20px;
+    }
+    .contacts .address p {
+        font-size: 14px;
+    }
+    .contacts .in-touch p, .contacts .in-touch a, .contacts .in-touch a span {
+        font-size: 16px;
     }
 }
 @media (max-width: 480px) {
@@ -1628,11 +1667,18 @@ footer p, footer p span {
         font-weight: 600;
         color: #000000;
     }
-    .slider-reviews-controls {
-        display: none;
+    .slider-reviews-controls, .slider-certificates-controls {
+        width: 25px;
+        height: 25px;
     }
     .divorce-lawyer-info {
         padding: 25px 10px;
+    }
+    .contacts-inner {
+        padding: 20px 0;
+    }
+    .contacts .address, .contacts .in-touch {
+        padding-left: 30px;
     }
 }
 @media (max-width: 400px) {
@@ -1681,6 +1727,19 @@ footer p, footer p span {
     }
     .form-make-an-appointment .form-field-wrap {
         margin: 0 auto 10px;
+    }
+    .contacts .address p, .contacts .in-touch p, .contacts .in-touch a, .contacts .in-touch a span {
+        font-size: 12px;
+    }
+    .contacts .address p {
+        width: 110px;
+    }
+    .contacts-inner .email {
+        padding-left: 30px;
+        min-height: 30px;
+    }
+    .contacts-inner .email a {
+        line-height: 35px;
     }
 
 }
