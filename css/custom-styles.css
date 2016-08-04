@@ -1745,6 +1745,7 @@ footer p, footer p span {
 }
 
 #topcontrol {
+    z-index: 1000!important;
     bottom: 10%!important;
     right: 10%!important;
 }
