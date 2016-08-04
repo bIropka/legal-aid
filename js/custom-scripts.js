@@ -1,5 +1,36 @@
 $(document).ready(function () {
 
+    idleTimer = null;
+    idleState = false;
+    idleWait = 1500; // задаём время ожидания бездействия
+
+    (function ($) {
+        $(document).ready(function () {
+            $('*').bind('mousemove keydown scroll', function () {
+                clearTimeout(idleTimer);
+                if (idleState == true) {
+
+                    // was action
+                    $('#topcontrol').css('display','block');
+
+                }
+
+                idleState = false;
+                idleTimer = setTimeout(function () {
+
+                    // no action
+                    $('#topcontrol').css('display','none');
+
+                    idleState = true;
+                }, idleWait);
+            });
+
+            // init
+           $("body").trigger("mousemove");
+
+        });
+    })(jQuery)
+
     $('.burger').click(function() {
         $(this).toggleClass('active');
         $(this).siblings('ul').slideToggle();
